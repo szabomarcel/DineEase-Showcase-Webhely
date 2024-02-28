@@ -185,6 +185,10 @@ footer a {
 #card{
   background-color: var(--background-color);
 }
+.card{
+  background-image: url('atlasszopngkep.png'); /* Háttérkép hivatkozása */
+  background-size: 100% 100%; /* Méretezés a kártya méretéhez */
+}
 
 #restaurants-list h2 {
   margin-top: 0;
@@ -446,5 +450,5 @@ form{
 #connect{
   background-color: white;
   text-align: center; /* A tartalmat középre igazítja */
-  color: var(--background-color);
+  color: var(--background-color-hover);
 }
