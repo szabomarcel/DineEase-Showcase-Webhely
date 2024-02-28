@@ -1,0 +1,450 @@
+:root {
+  --background-color: rgba(124,58,237,1);
+  --background-color-hover: rgba(124,58,237,1);
+  --border-color: rgba(124,58,237,1);
+  --border-color-hover: rgba(124,58,237,1);
+  --background-color-light:#ede9fe;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  flex: 3; /* A fő tartalom (main) kitölti a rendelkezésre álló helyet */
+  margin-right: 10px; /* Opcionális: adhatunk margót a jobb oldalon */
+  background-color: var(--background-color);
+  color: white;
+}
+
+main p {
+  color: white;
+}
+
+h4 {
+  color: #333;
+}
+
+p {
+  color: #666;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: calc(100% - 10px);
+  padding: 10px;
+  margin-bottom: 100px;
+  border: 1px solid #ccc;
+  border-radius: 5px;    
+  text-align: center; /* A tartalmat középre igazítja */
+}
+
+#search{
+  width: calc(30% - 10px);
+  padding: 10px;
+  margin-bottom: 100px;
+  border: 1px solid #ccc;
+  border-radius: 5px;    
+  text-align: center; /* A tartalmat középre igazítja */
+}
+
+button[type="submit"] {
+  left: 500px;
+  bottom: 20px;
+  text-align: center; /* A tartalmat középre igazítja */
+  padding: 10px 20px;
+  background-color: var(--background-color-light);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #555;
+}
+
+.icon-box, .section-title{
+  text-align: center;
+}
+
+footer {
+  width: 100%;
+  background-color: black;
+  color: #fff;
+  padding: 20px;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.card img {
+  max-width: 100%;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.kereso-label {
+  font-size: 14px;
+  /* Egyéb stílusok a címke számára */
+}
+
+.kereso-input {
+  width: 200px;
+  padding: 5px;
+  font-size: 14px;
+  /* Egyéb stílusok a beviteli mező számára */
+}
+
+.custom-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.custom-list img {
+  display: block; /* Tegye a képet blokk elemmé, hogy ne legyen a többi elemmel egy sorban */
+  margin-bottom: 10px; /* Opcionális: térjen el a következő elemtől */
+}
+
+.custom-list p {
+  margin: 0; /* Távolítsa el a bekezdések közti üres területet */
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-legal {
+  width: 100%; /* Teljes szélességű legyen */
+}
+
+.cutom-list {
+  margin-bottom: 20px; /* Tetszőleges margó hozzáadása az elválasztáshoz */
+}
+
+.search-button {
+  padding: 10px;
+  background-color: rgb(100, 50, 100);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* A kereső ikonhoz stílusok */
+.search-icon {
+  margin-right: 5px;
+}
+
+#restaurants-list {
+  margin: 20px auto;
+  max-width: 1300px;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#restaurants-list > div {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px; /* Csökkentjük a paddinget */
+  margin-bottom: 20px;
+  flex-basis: calc(33.33% - 20px); /* Három elemet rakunk egy sorba, levonunk 20px margót */
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box; /* A padding és a border ne vegye figyelembe az elem szélességét */
+}
+
+#card{
+  background-color: var(--background-color);
+}
+
+#restaurants-list h2 {
+  margin-top: 0;
+}
+
+#restaurants-list p {
+  margin-bottom: 5px;
+}
+
+/* Media query a kisebb képernyőkhoz (pl. telefonok) */
+@media (max-width: 768px) {
+    #restaurants-list > div {
+      flex-basis: 100%; /* Egymás alá rakjuk az elemeket telefonon */
+    }
+}
+
+/* Media query a tablet méretű képernyőkhöz */
+@media (min-width: 769px) and (max-width: 1024px) {
+    #restaurants-list > div {
+      flex-basis: calc(33.33% - 20px); /* Újra beállítjuk a flex-basis-t */
+    }
+}
+
+a {
+  color: purple; /* Lilára színezi a szöveget */
+  text-decoration: none; /* Eltávolítja az aláhúzást */
+  text-align: right; /* Jobbra rendezés */
+}
+
+a::after {
+    content: ' »'; /* Hozzáad egy dupla nyíl ikont a link után */
+}
+
+img.gray{
+    filter: grayscale();
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.timeline {
+  white-space: nowrap;
+  overflow-x: hidden;
+}
+
+.timeline ol {
+  font-size: 0;
+  width: 100vw;
+  padding: 250px ;
+  transition: all 1s;
+}
+
+.timeline ol li {
+  position: relative;
+  display: inline-block;
+  list-style-type: none;
+  width: 160px;
+  height: 5px;
+  background: black;
+}
+
+.timeline ol li:last-child {
+  width: 280px;
+}
+
+.timeline ol li:not(:first-child) {
+  margin-left: 14px;
+}
+
+.timeline ol li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: calc(100% + 1px);
+  bottom: 0;
+  width: 12px;
+  height: 12px;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background: #f45b69;
+}
+
+.timeline ol li div {
+  position: absolute;
+  left: calc(100% + 7px);
+  width: 280px;
+  padding: 15px;
+  font-size: 1rem;
+  white-space: normal;
+  color: black;
+  background: #f45b69;
+}
+
+.timeline ol li div::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.timeline ol li:nth-child(odd) div {
+  top: -16px;
+  transform: translateY(-100%);
+}
+
+.timeline ol li:nth-child(odd) div::before {
+  top: 100%;
+  border-width: 8px 8px 0 0;
+  border-color: white transparent transparent transparent;
+}
+
+.timeline ol li:nth-child(even) div {
+  top: calc(100% + 16px);
+}
+
+.timeline ol li:nth-child(even) div::before {
+  top: -8px;
+  border-width: 8px 0 0 8px;
+  border-color: transparent transparent transparent white;
+}
+
+.timeline time {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+/* TIMELINE ARROWS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.timeline .arrows {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.timeline .arrows .arrow__prev {
+  margin-right: 20px;
+}
+
+.timeline .disabled {
+  opacity: 0.5;
+}
+
+.timeline .arrows img {
+  width: 45px;
+  height: 45px;
+}
+
+/* GENERAL MEDIA QUERIES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media screen and (max-width: 599px) {
+  .timeline ol,
+  .timeline ol li {
+    width: auto;
+  }
+
+  .timeline ol {
+    padding: 0;
+    transform: none !important;
+  }
+
+  .timeline ol li {
+    display: block;
+    height: auto;
+    background: transparent;
+  }
+
+  .timeline ol li:first-child {
+    margin-top: 25px;
+  }
+
+  .timeline ol li:not(:first-child) {
+    margin-left: auto;
+  }
+
+  .timeline ol li div {
+    position: static;
+    width: 94%;
+    height: auto !important;
+    margin: 0 auto 25px;
+  }
+
+  .timeline ol li:nth-child(odd) div {
+    transform: none;
+  }
+
+  .timeline ol li:nth-child(odd) div::before,
+  .timeline ol li:nth-child(even) div::before {
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+    border: none;
+    border-left: 1px solid white;
+    height: 25px;
+  }
+
+  .timeline ol li:last-child,
+  .timeline ol li:nth-last-child(2) div::before,
+  .timeline ol li:not(:last-child)::after,
+  .timeline .arrows {
+    display: none;
+  }
+}
+
+/* FOOTER STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.page-footer {
+  position: fixed;
+  right: 0;
+  bottom: 20px;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  color: black;
+  background: rgba(255, 255, 255, 0.65);
+}
+
+.page-footer a {
+  display: flex;
+  margin-left: 4px;
+}
+
+#lista{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+form{
+  flex: 1; /* A kapcsolati űrlap kitölti a rendelkezésre álló helyet */
+}
+
+#form{
+  text-align: center;
+}
+
+#oldal{
+  text-align: center; /* A tartalmat középre igazítja */
+  width: 100%;
+  max-width: 100%;
+}
+
+#connect{
+  background-color: white;
+  text-align: center; /* A tartalmat középre igazítja */
+  color: var(--background-color);
+}

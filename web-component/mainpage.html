@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ez a weboldal leírása, ami tartalmazza a legfontosabb kulcsszavakat és információkat.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/design.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Main Page</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="picture/images/Logo.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="mainpage.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutus.html">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Pricing</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-xs-12 pt-5" id="HeroSection">
+                <h1><b>DineEase: Exception</b></h1>
+                <h1><b>Dining Awaits</b></h1>
+                <p>Dive into culinary wonders with DineEase. We curete top-rated restaurant, each with distinct lavors and ambiance. From international dishes to traditional delights and gastronic adventure, find your perect spot with DineEase.</p>
+                <div class="search-container">
+                    <button class="search-button">
+                        <img src="picture/images/Search Icon.png" alt="">Explore Restaurants
+                    </button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <!-- Kép elhelyezése -->
+                <img src="./picture/images/DineEase.png" xmlns="picture/images/Hero Illustration.png" class="custom-image" alt="Kép 1" id="HeroSection">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h1 class="section-title"><b>Featured Restaurants</b></h1>
+        <p class="section-title">Dicover Unforgettable Dining Destinations</p> 
+        <div id="restaurants-list"></div>   
+        <div class="container" id="card"> 
+            <div class="row">
+                <div class="col-md-6">
+                    <h1><b>Delightful</b></h1>
+                    <h1><b>Experiences Shared</b></h1>
+                    <h1><b>by Our Guests</b></h1>                
+                </div>
+                <div class="col-md-6">
+                    <div class="card d-flex flex-row">
+                        <svg width="50" height="30" viewBox="0 0 142 116" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g opacity="0.3" clip-path="url(#clip0_2540_7248)">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M141.377 18.1171C120.202 28.1823 109.615 40.0086 109.615 53.5965C118.64 54.603 126.103 58.1677 132.005 64.2907C137.906 70.4136 140.857 77.501 140.857 85.5531C140.857 94.1085 137.993 101.322 132.265 107.193C126.537 113.064 119.334 116 110.656 116C100.936 116 92.5185 112.184 85.4023 104.551C78.286 96.9183 74.728 87.6501 74.728 76.7462C74.728 44.0345 93.6465 18.4527 131.484 0L141.377 18.1171ZM66.6493 18.1171C45.3006 28.1823 34.6264 40.0086 34.6264 53.5965C43.8254 54.603 51.3755 58.1677 57.2767 64.2907C63.178 70.4136 66.1286 77.501 66.1286 85.5531C66.1286 94.1085 63.2214 101.322 57.4069 107.193C51.5924 113.064 44.3461 116 35.6678 116C25.948 116 17.5736 112.184 10.5441 104.551C3.51467 96.9183 0 87.6501 0 76.7462C0 44.0345 18.8317 18.4527 56.4957 0L66.6493 18.1171Z" fill="#7C3AED"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_2540_7248">
+                                    <rect width="142" height="116" fill="white"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        <div class="card-body">
+                            <p class="card-text">With DineEase, we've unconvered culinary treasures right in our city. Every dining recommendation feels like an exclusive invitation to a world of flavors. We thougth we knew our local dining scene, but DineEase introduced us to so much more.</p>
+                            <b>Emma & Jacob </b>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card d-flex flex-row">
+                        <svg width="50" height="30" viewBox="0 0 142 116" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g opacity="0.3" clip-path="url(#clip0_2540_7248)">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M141.377 18.1171C120.202 28.1823 109.615 40.0086 109.615 53.5965C118.64 54.603 126.103 58.1677 132.005 64.2907C137.906 70.4136 140.857 77.501 140.857 85.5531C140.857 94.1085 137.993 101.322 132.265 107.193C126.537 113.064 119.334 116 110.656 116C100.936 116 92.5185 112.184 85.4023 104.551C78.286 96.9183 74.728 87.6501 74.728 76.7462C74.728 44.0345 93.6465 18.4527 131.484 0L141.377 18.1171ZM66.6493 18.1171C45.3006 28.1823 34.6264 40.0086 34.6264 53.5965C43.8254 54.603 51.3755 58.1677 57.2767 64.2907C63.178 70.4136 66.1286 77.501 66.1286 85.5531C66.1286 94.1085 63.2214 101.322 57.4069 107.193C51.5924 113.064 44.3461 116 35.6678 116C25.948 116 17.5736 112.184 10.5441 104.551C3.51467 96.9183 0 87.6501 0 76.7462C0 44.0345 18.8317 18.4527 56.4957 0L66.6493 18.1171Z" fill="#7C3AED"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_2540_7248">
+                                    <rect width="142" height="116" fill="white"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        <div class="card-body">
+                            <p class="card-text">Exquisite flavors, impeccable service, adn a memorable ambiance - DineEase made our celebration truly special</p>
+                            <b>Robert & Emily</b>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card d-flex flex-row">
+                        <svg width="50" height="30" viewBox="0 0 142 116" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g opacity="0.3" clip-path="url(#clip0_2540_7248)">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M141.377 18.1171C120.202 28.1823 109.615 40.0086 109.615 53.5965C118.64 54.603 126.103 58.1677 132.005 64.2907C137.906 70.4136 140.857 77.501 140.857 85.5531C140.857 94.1085 137.993 101.322 132.265 107.193C126.537 113.064 119.334 116 110.656 116C100.936 116 92.5185 112.184 85.4023 104.551C78.286 96.9183 74.728 87.6501 74.728 76.7462C74.728 44.0345 93.6465 18.4527 131.484 0L141.377 18.1171ZM66.6493 18.1171C45.3006 28.1823 34.6264 40.0086 34.6264 53.5965C43.8254 54.603 51.3755 58.1677 57.2767 64.2907C63.178 70.4136 66.1286 77.501 66.1286 85.5531C66.1286 94.1085 63.2214 101.322 57.4069 107.193C51.5924 113.064 44.3461 116 35.6678 116C25.948 116 17.5736 112.184 10.5441 104.551C3.51467 96.9183 0 87.6501 0 76.7462C0 44.0345 18.8317 18.4527 56.4957 0L66.6493 18.1171Z" fill="#7C3AED"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_2540_7248">
+                                    <rect width="142" height="116" fill="white"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        <div class="card-body">
+                            <p class="card-text">DineEase guided us to hidden gems we never knew existed! We've become food adventureres, thanks to this platform.</p>
+                            <b>Lisa & Mark</b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <h1 class="section-title"><b>Find Your Perfect Dining Spot</b></h1>
+            <p class="section-title">Searcg by Cuisine, Location, or Name</p>
+            <form action="#" method="GET" id="form">
+                <button type="submit" id="search-btn">
+                    <img src="picture/images/Search Icon.png" alt="Search for restaurants">
+                </button>
+                <input type="text" name="search" id="search" placeholder="Search for restaurants">
+                <input type="image" src="submit.gif" alt="Submit" style="float:right" width="48" height="48">
+                <button type="submit" id="search-btn">
+                    <img src="picture/images/Filter Icon.png" alt="Search for restaurants">
+                </button>
+                <button type="submit" id="search-btn">
+                    <img src="picture/images/Search Icon.png" alt="Search for restaurants">
+                </button>
+            </form>
+        </div>
+    </div>
+    <div id="mydiv"></div>
+    <footer id="footer" class="footer">
+        <div class="footer-content">
+            <div class="container">
+                <div class="row g-5">
+                    <div class="col-lg-4">
+                        <ul>
+                            <img src="picture/images/Logomark.png"><br>
+                            <p>Privacy Policy</p>
+                            <p>+35 30 123 4567   support@dineease.com</p>
+                        </ul>        
+                    </div>              
+                <div class="footer-legal">
+                    <div class="container">
+                        <div class="row justify-content-between">
+                            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                                <div class="copyright">
+                                    © Copyright <strong><span>2024</span></strong> - All rights reserved
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <ul>
+                                    <p>Follow Us</p>
+                                    <img src="picture/images/Instagram Icon.png" alt="Instagram">
+                                    <img src="picture/images/Facebook Icon.png" alt="Facebook">
+                                    <img src="picture/images/Twitter Icon.png" alt="Twitter">
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </footer>
+    <script src="js/web.js"></script>
+</body>
+</html>
