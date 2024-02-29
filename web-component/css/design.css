@@ -14,8 +14,8 @@ body {
 
 main {
   padding: 20px;
-  max-width: 800px;
-  margin: 0 auto;
+  max-width: 500px;
+  margin: 0;
   flex: 3; /* A fő tartalom (main) kitölti a rendelkezésre álló helyet */
   margin-right: 10px; /* Opcionális: adhatunk margót a jobb oldalon */
   background-color: var(--background-color);
@@ -72,9 +72,13 @@ button[type="submit"] {
   cursor: pointer;
 }
 
-button[type="submit"]:hover {
-  background-color: #555;
+#save{
+  background-color: var(--background-color)
 }
+
+/*button[type="submit"]:hover {
+  background-color: #555;
+}*/
 
 .icon-box, .section-title{
   text-align: center;
@@ -94,16 +98,37 @@ footer a {
 }
 
 .card {
-  border: 1px solid #ccc;
   border-radius: 5px;
-  padding: 20px;
-  margin-bottom: 20px;
+  padding: 10px;
+  margin-bottom: 100px;
+  margin-top: 100px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+#kep{
+  width: 390px; 
+  height: 280px;
 }
 
 .card img {
   max-width: 100%;
   border-radius: 5px;
   margin-bottom: 10px;
+}
+
+#picture{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#icon{
+  margin-top: 160px;
+}
+
+#fank{
+  margin-left: 400px;
+  margin-right: auto;
 }
 
 .kereso-label {
@@ -170,6 +195,7 @@ footer a {
   justify-content: space-between;
 }
 
+
 #restaurants-list > div {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border: 1px solid #ccc;
@@ -182,12 +208,29 @@ footer a {
   box-sizing: border-box; /* A padding és a border ne vegye figyelembe az elem szélességét */
 }
 
-#card{
-  background-color: var(--background-color);
+#mydiv{
+  margin: 20px auto;
+  max-width: 1300px;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
-.card{
-  background-image: url('atlasszopngkep.png'); /* Háttérkép hivatkozása */
-  background-size: 100% 100%; /* Méretezés a kártya méretéhez */
+
+#mydiv > div {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px; /* Csökkentjük a paddinget */
+  margin-bottom: 20px;
+  flex-basis: calc(33.33% - 20px); /* Három elemet rakunk egy sorba, levonunk 20px margót */
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box; /* A padding és a border ne vegye figyelembe az elem szélességét */
+}
+
+#card{
+  background-color: var(--background-color-light);
 }
 
 #restaurants-list h2 {
@@ -218,7 +261,7 @@ a {
   text-align: right; /* Jobbra rendezés */
 }
 
-a::after {
+#nyil::after {
     content: ' »'; /* Hozzáad egy dupla nyíl ikont a link után */
 }
 
@@ -280,7 +323,7 @@ button {
   height: 12px;
   transform: translateY(-50%);
   border-radius: 50%;
-  background: #f45b69;
+  background: var(--background-color);
 }
 
 .timeline ol li div {
@@ -291,7 +334,7 @@ button {
   font-size: 1rem;
   white-space: normal;
   color: black;
-  background: #f45b69;
+  background: var(--background-color-light);
 }
 
 .timeline ol li div::before {
@@ -431,10 +474,6 @@ button {
 #lista{
   display: flex;
   flex-wrap: wrap;
-}
-
-form{
-  flex: 1; /* A kapcsolati űrlap kitölti a rendelkezésre álló helyet */
 }
 
 #form{
