@@ -99,11 +99,11 @@ footer a {
 
 .card {
   border-radius: 5px;
-  padding: 10px;
-  margin-bottom: 100px;
-  margin-top: 100px;
-  margin-left: 50px;
-  margin-right: 50px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 #kep{
@@ -204,7 +204,6 @@ footer a {
   margin-bottom: 20px;
   flex-basis: calc(33.33% - 20px); /* Három elemet rakunk egy sorba, levonunk 20px margót */
   background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   box-sizing: border-box; /* A padding és a border ne vegye figyelembe az elem szélességét */
 }
 
@@ -225,7 +224,6 @@ footer a {
   margin-bottom: 20px;
   flex-basis: calc(33.33% - 20px); /* Három elemet rakunk egy sorba, levonunk 20px margót */
   background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   box-sizing: border-box; /* A padding és a border ne vegye figyelembe az elem szélességét */
 }
 
@@ -245,6 +243,14 @@ footer a {
 @media (max-width: 768px) {
     #restaurants-list > div {
       flex-basis: 100%; /* Egymás alá rakjuk az elemeket telefonon */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 35px; /* Csökkentjük a paddinget */
+      margin-bottom: 30px;
+      flex-basis: calc(33.33% - 30px); /* Három elemet rakunk egy sorba, levonunk 20px margót */
+      background-color: #fff;
+      box-sizing: border-box; /* A padding és a border ne vegye figyelembe az elem szélességét */
     }
 }
 
@@ -252,7 +258,45 @@ footer a {
 @media (min-width: 769px) and (max-width: 1024px) {
     #restaurants-list > div {
       flex-basis: calc(33.33% - 20px); /* Újra beállítjuk a flex-basis-t */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 35px; /* Csökkentjük a paddinget */
+      margin-bottom: 30px;
+      flex-basis: calc(33.33% - 30px); /* Három elemet rakunk egy sorba, levonunk 20px margót */
+      background-color: #fff;
+      box-sizing: border-box; /* A padding és a border ne vegye figyelembe az elem szélességét */
     }
+}
+
+/* Media query a kisebb képernyőkhoz (pl. telefonok) */
+@media (max-width: 768px) {
+  #mydiv > div {
+    flex-basis: 100%; /* Egymás alá rakjuk az elemeket telefonon */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 35px; /* Csökkentjük a paddinget */
+    margin-bottom: 30px;
+    flex-basis: calc(33.33% - 30px); /* Három elemet rakunk egy sorba, levonunk 20px margót */
+    background-color: #fff;
+    box-sizing: border-box; /* A padding és a border ne vegye figyelembe az elem szélességét */
+  }
+}
+
+/* Media query a tablet méretű képernyőkhöz */
+@media (min-width: 769px) and (max-width: 1024px) {
+  #mydiv > div {
+    flex-basis: calc(33.33% - 20px); /* Újra beállítjuk a flex-basis-t */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 35px; /* Csökkentjük a paddinget */
+    margin-bottom: 30px;
+    flex-basis: calc(33.33% - 30px); /* Három elemet rakunk egy sorba, levonunk 20px margót */
+    background-color: #fff;
+    box-sizing: border-box; /* A padding és a border ne vegye figyelembe az elem szélességét */
+  }
 }
 
 a {
@@ -269,188 +313,66 @@ img.gray{
     filter: grayscale();
 }
 
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+
+.timeline-steps {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap
 }
 
-button {
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  outline: none;
+.timeline-steps .timeline-step {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 1rem
 }
 
-.timeline {
-  white-space: nowrap;
-  overflow-x: hidden;
+@media (min-width:768px) {
+    .timeline-steps .timeline-step:not(:last-child):after {
+        content: "";
+        display: block;
+        border-top: .25rem dotted var(--background-color-hover);
+        width: 3.46rem;
+        position: absolute;
+        left: 7.5rem;
+        top: .3125rem
+    }
+    .timeline-steps .timeline-step:not(:first-child):before {
+        content: "";
+        display: block;
+        border-top: .25rem dotted var(--background-color-hover);
+        width: 3.8125rem;
+        position: absolute;
+        right: 7.5rem;
+        top: .3125rem
+    }
 }
 
-.timeline ol {
-  font-size: 0;
-  width: 100vw;
-  padding: 250px ;
-  transition: all 1s;
+.timeline-steps .timeline-content {
+    width: 10rem;
+    text-align: center
 }
 
-.timeline ol li {
-  position: relative;
-  display: inline-block;
-  list-style-type: none;
-  width: 160px;
-  height: 5px;
-  background: black;
+.timeline-steps .timeline-content .inner-circle {
+    border-radius: 1.5rem;
+    height: 1rem;
+    width: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background-color-hover)
 }
 
-.timeline ol li:last-child {
-  width: 280px;
-}
-
-.timeline ol li:not(:first-child) {
-  margin-left: 14px;
-}
-
-.timeline ol li:not(:last-child)::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: calc(100% + 1px);
-  bottom: 0;
-  width: 12px;
-  height: 12px;
-  transform: translateY(-50%);
-  border-radius: 50%;
-  background: var(--background-color);
-}
-
-.timeline ol li div {
-  position: absolute;
-  left: calc(100% + 7px);
-  width: 280px;
-  padding: 15px;
-  font-size: 1rem;
-  white-space: normal;
-  color: black;
-  background: var(--background-color-light);
-}
-
-.timeline ol li div::before {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-style: solid;
-}
-
-.timeline ol li:nth-child(odd) div {
-  top: -16px;
-  transform: translateY(-100%);
-}
-
-.timeline ol li:nth-child(odd) div::before {
-  top: 100%;
-  border-width: 8px 8px 0 0;
-  border-color: white transparent transparent transparent;
-}
-
-.timeline ol li:nth-child(even) div {
-  top: calc(100% + 16px);
-}
-
-.timeline ol li:nth-child(even) div::before {
-  top: -8px;
-  border-width: 8px 0 0 8px;
-  border-color: transparent transparent transparent white;
-}
-
-.timeline time {
-  display: block;
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-bottom: 8px;
-}
-
-/* TIMELINE ARROWS
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-.timeline .arrows {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
-.timeline .arrows .arrow__prev {
-  margin-right: 20px;
-}
-
-.timeline .disabled {
-  opacity: 0.5;
-}
-
-.timeline .arrows img {
-  width: 45px;
-  height: 45px;
-}
-
-/* GENERAL MEDIA QUERIES
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-@media screen and (max-width: 599px) {
-  .timeline ol,
-  .timeline ol li {
-    width: auto;
-  }
-
-  .timeline ol {
-    padding: 0;
-    transform: none !important;
-  }
-
-  .timeline ol li {
-    display: block;
-    height: auto;
-    background: transparent;
-  }
-
-  .timeline ol li:first-child {
-    margin-top: 25px;
-  }
-
-  .timeline ol li:not(:first-child) {
-    margin-left: auto;
-  }
-
-  .timeline ol li div {
-    position: static;
-    width: 94%;
-    height: auto !important;
-    margin: 0 auto 25px;
-  }
-
-  .timeline ol li:nth-child(odd) div {
-    transform: none;
-  }
-
-  .timeline ol li:nth-child(odd) div::before,
-  .timeline ol li:nth-child(even) div::before {
-    left: 50%;
-    top: 100%;
-    transform: translateX(-50%);
-    border: none;
-    border-left: 1px solid white;
-    height: 25px;
-  }
-
-  .timeline ol li:last-child,
-  .timeline ol li:nth-last-child(2) div::before,
-  .timeline ol li:not(:last-child)::after,
-  .timeline .arrows {
-    display: none;
-  }
+.timeline-steps .timeline-content .inner-circle:before {
+    content: "";
+    background-color: var(--background-color-hover);
+    display: inline-block;
+    height: 2rem;
+    width: 1rem;
+    min-width: 2rem;
+    border-radius: 6.25rem;
+    opacity: .2
 }
 
 /* FOOTER STYLES

@@ -112,38 +112,52 @@
     </div>
     <div class="container">
         <h1 class="section-title"><b>Find Your Perfect Dining Spot</b></h1>
-        <p class="section-title">Searcg by Cuisine, Location, or Name</p>
-        <form action="#" method="GET" id="form">
-            <button type="submit" id="search-btn">
+        <p class="section-subtitle">Search by Cuisine, Location, or Name</p>
+        <form action="#" method="GET" id="formal">
+            <button type="submit" id="search-cuisine-btn">
                 <img src="picture/images/Search Icon.png" alt="Search for restaurants">
             </button>
             <input type="text" name="search" id="search" placeholder="Search for restaurants">
-            <button type="submit" id="search-btn">
-                <a href="simplesearch.html"><img src="picture/images/Filter Icon.png" alt="Search for restaurants"></a>
-            </button>
-            <button type="submit" id="search-btn">
+            <input type="text" name="location" id="location" placeholder="Location">
+            <input type="text" name="name" id="name" placeholder="Name">
+            <button type="submit" id="search-name-btn">
                 <img src="picture/images/Search Icon.png" alt="Search for restaurants">
             </button>
         </form>
+        <p style="text-align:center"><a href="#">Show more <i class="fa fa-angle-down"></i></a></p>
     </div>
     <div id="mydiv"></div>
-    <p style="text-align:center"><a href="#">Show more<i class="fa fa-angle-down"></i></a></p>
-    <footer class="container-fluid bg-dark text-white">
-        <div class="container d-flex justify-content-between row mx-auto py-5">
-            <div class="col-6">
-                <img src="images/logomark.png" alt="Logomark">
-                <p><a href="privacy.html">Privacy Policy</a></p>
-                <p>+36 30 123 4567 support@dineease.com</p>
-                <p>&COPY; 2024 - All rights reserved</p>
+    <footer id="footer" class="footer">
+        <div class="footer-content">
+            <div class="container">
+                <div class="row g-5">
+                    <div class="col-lg-4">
+                        <ul id="fa">
+                            <img src="picture/images/Logomark.png"><br>
+                            <p>Privacy Policy</p>
+                            <p>+35 30 123 4567   support@dineease.com</p>
+                        </ul>        
+                    </div>              
+                <div class="footer-legal">
+                    <div class="container">
+                        <div class="row justify-content-between">
+                            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                                <div class="copyright">
+                                    © Copyright <strong><span>2024</span></strong> - All rights reserved
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <ul id="fank">
+                                    <p>Follow Us</p>
+                                    <img src="picture/images/Instagram Icon.png" alt="Instagram">
+                                    <img src="picture/images/Facebook Icon.png" alt="Facebook">
+                                    <img src="picture/images/Twitter Icon.png" alt="Twitter">
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-4"><p>Follow Us</p>
-                <p>
-                    <img src="picture/images/Instagram Icon.png" alt="Instagram">
-                    <img src="picture/images/Facebook Icon.png" alt="Facebook">
-                    <img src="picture/images/Twitter Icon.png" alt="Twitter">
-                </p>
-            </div>
-        </div>
     </footer>
     <script src="js/web.js"></script>
 </body>
