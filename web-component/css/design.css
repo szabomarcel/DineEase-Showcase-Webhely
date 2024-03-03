@@ -227,10 +227,6 @@ footer a {
   box-sizing: border-box; /* A padding és a border ne vegye figyelembe az elem szélességét */
 }
 
-#card{
-  background-color: var(--background-color-light);
-}
-
 #restaurants-list h2 {
   margin-top: 0;
 }
@@ -412,4 +408,8 @@ img.gray{
   background-color: white;
   text-align: center; /* A tartalmat középre igazítja */
   color: var(--background-color-hover);
+}
+
+.hatter{
+  background-color: var(--background-color-light);
 }
